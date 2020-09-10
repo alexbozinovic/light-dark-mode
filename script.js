@@ -14,7 +14,7 @@ function isLight(check){
     document.documentElement.setAttribute('data-theme', modeSet);
 
     nav.style.backgroundColor = check ? 'rgb(255 255 255 / 50%)' : 'rgb(0 0 0 / 50% )';
-    textBox.style.backgroundColor = check ? 'rgb(0 0 0 / 50%)' : 'rbg(255 255 255 / 50%)';
+    textBox.style.backgroundColor = check ? 'rgb(0 0 0 / 50%)' : 'rgb(255 255 255 / 50%)';
     toggleIcon.children[0].textContent = check ? 'Light Mode' : 'Dark Mode';
     check ? toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun') : toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon')
 
@@ -23,7 +23,7 @@ function isLight(check){
     image3.src = `img/undraw_conceptual_idea_${modeSet}.svg`;
 }
 
-// Switch Theme Dynamicall
+// Switch Theme Dynamically
 function switchTheme(event){
     if( event.target.checked){
         localStorage.setItem('theme', 'dark');
